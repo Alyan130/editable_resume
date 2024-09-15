@@ -1,9 +1,9 @@
-const educationContainer = document.getElementById("education-container") as HTMLDivElement;
-const skillsContainer = document.getElementById("skills-container") as HTMLDivElement;
-const projectsContainer = document.getElementById("projects-container") as HTMLDivElement;
-const form = document.getElementById("resume-form") as HTMLFormElement;
+const educationContainer = document.getElementById("educationField") as HTMLDivElement;
+const skillsContainer = document.getElementById("skillsField") as HTMLDivElement;
+const projectsContainer = document.getElementById("projectsField") as HTMLDivElement;
+const form = document.getElementById("form") as HTMLFormElement;
 
-document.getElementById("add-education")?.addEventListener("click", () => {
+document.getElementById("addEducation")?.addEventListener("click", () => {
     const input = document.createElement("input");
     input.type = "text";
     input.required;
@@ -12,13 +12,13 @@ document.getElementById("add-education")?.addEventListener("click", () => {
     educationContainer?.appendChild(input);
 });
 
-document.getElementById("remove-education")?.addEventListener("click", () => {
+document.getElementById("removeEducation")?.addEventListener("click", () => {
     if (educationContainer?.children.length > 1) {
         educationContainer?.lastChild?.remove();
     }
 });
 
-document.getElementById("add-skill")?.addEventListener("click", () => {
+document.getElementById("addSkill")?.addEventListener("click", () => {
     const input = document.createElement("input");
     input.type = "text";
     input.classList.add("skill");
@@ -27,13 +27,13 @@ document.getElementById("add-skill")?.addEventListener("click", () => {
     skillsContainer?.appendChild(input);
 });
 
-document.getElementById("remove-skill")?.addEventListener("click", () => {
+document.getElementById("removeSkill")?.addEventListener("click", () => {
     if (skillsContainer?.children.length > 1) {
         skillsContainer?.lastChild?.remove();
     }
 });
 
-document.getElementById("add-project")?.addEventListener("click", () => {
+document.getElementById("addProject")?.addEventListener("click", () => {
     const input = document.createElement("input");
     input.type = "text";
     input.classList.add("project");
@@ -42,7 +42,7 @@ document.getElementById("add-project")?.addEventListener("click", () => {
     projectsContainer?.appendChild(input);
 });
 
-document.getElementById("remove-project")?.addEventListener("click", () => {
+document.getElementById("removeProject")?.addEventListener("click", () => {
     if (projectsContainer?.children.length > 1) {
         projectsContainer?.lastChild?.remove();
     }
@@ -81,7 +81,7 @@ form.addEventListener('submit', (event: Event) => {
             <div class="line"></div> 
             <p>${profileSummary}</p> 
         </div>
-        <div class="contact-info">
+        <div class="contactInfo">
             <div class="icon">
                 <img src="./images/1000_F_141001208_v3DEsH43GqiCQlnOM6S3pSE8guHSJO74-removebg-preview.png" alt="">
                 <p>${phone}</p>
@@ -95,13 +95,13 @@ form.addEventListener('submit', (event: Event) => {
                 <p>${address}</p>
             </div>
         </div>
-        <div class="education-section">
+        <div class="educationSection">
             <h2>Education:</h2>
             <ul>
                 ${educationHTML}
             </ul>
         </div>
-        <div class="skills-section">
+        <div class="skillsSection">
             <h2>Skills:</h2>
             <div class="line"></div>
             <div class="skills">
@@ -109,13 +109,13 @@ form.addEventListener('submit', (event: Event) => {
                 ${skillsHTML}
             </div>
         </div>
-        <div class="projects-section">
+        <div class="projectsSection">
             <h2>Projects:</h2>
             <ul>
                 ${projectsHTML}
             </ul>
         </div>
-        <button style="margin-top:25px" id="edit-button">Edit Resume</button>
+        <button style="margin-top:25px" id="edit">Edit Resume</button>
     `;
 
     const resumeDisplay = document.getElementById('resume-display') as HTMLElement;
@@ -124,8 +124,8 @@ form.addEventListener('submit', (event: Event) => {
     resumeDisplay.style.display = 'block';
     resume.style.display = "none";
 
-    const editButton = document.getElementById("edit-button") as HTMLButtonElement;
-    editButton?.addEventListener("click", (e) => {
+    const editButton = document.getElementById("edit") as HTMLButtonElement;
+    editButton?.addEventListener("click", () => {
         document.querySelector("#intro h1")?.setAttribute("contentEditable", "true");
 
         const education_items = document.querySelectorAll("p");

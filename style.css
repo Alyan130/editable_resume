@@ -56,7 +56,7 @@ button {
     cursor: pointer;
 }
 
-#generate-button {
+#generateButton {
     background-color: #218838;
     padding: 12px 20px;
     width: 100%;
@@ -65,7 +65,7 @@ button {
     display: block;
 }
 
-#generate-button:hover {
+#generateButton:hover {
     background-color: #2eaf03;
 }
 
@@ -121,12 +121,12 @@ button:hover {
     margin-top: 10px;
 }
 
-.education-section,.skills-section,.projects-section {
+.educationSection,.skillsSection,.projectsSection {
     margin-top: 37px;
     margin-left: 10px;
 }
 
-.education-section,.skills-section,.projects-section h2 {
+.educationSection,.skillsSection,.projectsSection h2 {
     color: darkcyan;
 }
 
@@ -176,7 +176,7 @@ li {
         width: 100%;
     }
 
-    #generate-button {
+    #generateButton {
         width: 100%;
     }
 
@@ -201,7 +201,7 @@ li {
         width: 100%;
     }
 
-    #generate-button {
+    #generateButton {
         width: 100%;
     }
 
@@ -217,7 +217,7 @@ li {
 }
 
 @media (min-width: 769px) {
-    #generate-button {
+    #generateButton {
         width: 300px;
     }
 
